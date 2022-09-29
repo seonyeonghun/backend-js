@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hanul tour!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-3.6.1.js"></script>
 </head>
 <body>
-    <h1>예약하기</h1>
-    <h2>예약자 확인</h2>
+    <header>
+        <h1>모두의 투어, HANUL TOUR!</h1>
+        <p>예약/확인</p>
+    </header>
+    <nav>
+        <ul id="gnb">
+            <li><a href="/">처음으로</a></li>
+            <li><a href="#">한울투어</a></li>
+            <li><a href="/reserve">예약/확인</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </nav>
     <form id="checkForm" name="checkForm" autocomplete="off" method="post">
         <label for="guest_name">예약자명</label>
         <input type="text" id="guest_name" name="guest_name">
@@ -16,5 +28,6 @@
         <input type="text" id="guest_phone" name="guest_phone">
         <input type="submit" value="확인">
     </form>
+    <script src="script/ajax.js"></script>
 </body>
 </html>

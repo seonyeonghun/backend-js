@@ -8,5 +8,5 @@ nodejs 를 이용한 백엔드 자바스크립트
  * git
  
  # index
- 1. [nodejs 설치](https://nodejs.org){:target=_blank}
+ 1. [nodejs 설치](https://nodejs.org){:target="_blank"}
  2. vscode 설치

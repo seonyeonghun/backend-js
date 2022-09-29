@@ -8,7 +8,7 @@ nodejs 를 이용한 백엔드 자바스크립트
  * git
  
  # index
- 1. node 설치[새창열기](https://nodejs.org){:target="_blank"}
+ 1. node 설치[새창열기]: https://nodejs.org
  2. vscode 설치
  3. 작업폴더 지정 (ex. D:\backend-js) 후  클론(git clone)
  4. nodemon 전역설치 : npm i nodemon -g

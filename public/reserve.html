@@ -7,6 +7,7 @@
     <title>hanul tour!</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="script/jquery-3.6.1.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -24,9 +25,9 @@
     <div class="container">
         <form id="checkForm" name="checkForm" autocomplete="off" method="post">
             <label for="guest_name">예약자명</label>
-            <input type="text" id="guest_name" name="guest_name">
+            <input type="text" id="guest_name" name="guest_name" placeholder="12자 이내">
             <label for="guest_phone">전화번호</label>
-            <input type="text" id="guest_phone" name="guest_phone">
+            <input type="tel" id="guest_phone" name="guest_phone" placeholder="-빼고 입력하세요">
             <input type="submit" value="확인">
         </form>
     </div>

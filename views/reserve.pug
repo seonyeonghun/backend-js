@@ -29,6 +29,9 @@ html(lang="en")
                 span=subtitle
             img(src=src, alt=subtitle)  
         div(class="container")
+            h2 예약/확인 서비스입니다.
+            h3 자바스크립트 XMLHttpRequest 방식과 jQuery $.ajax()를 비교하세요!
+            p 쉽게 확인할수 있도록 기본값을 설정했으니, 변경하면서 체크해보세요.
             form(action="/send_post", id="checkForm", name="checkForm", autocomplete="off", method="post")
                 ul(class="form-list")
                     li
@@ -42,7 +45,7 @@ html(lang="en")
                         input(type="submit", value="post 전송", id="send")
         div(class="container")
             button(type="button", id="ajax_send") ajax post 전송
-            p(class="ajax_result") ajax 비동기로 전송된 데이터가 표시됩니다.
+            p(class="ajax_result") ajax 비동기로 전송된 데이터가 곧바로 표시됩니다.
         footer
             div(class="container")
                 p &copy; hanul. 2022.all rights reserved.

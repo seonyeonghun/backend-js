@@ -21,32 +21,60 @@ app.get("/", function (req, res) {
   // get 요청이 들어오면 응답
   //res.send('Hello World'); // 서버에서 text로 응답
   //res.sendFile(__dirname+"/public/main.html"); // HTML 파일로 응답
-  res.render("index", { title: "hanul tour!", message: "지금 예약하세요!" }); // pug로 응답
+  res.render("index", {
+    title: "여행플랫폼 : hanul",
+    subtitle: "한울투어",
+    message: "새로운 여행지를 검색하세요",
+    src: "images/welcome.jpg",
+  }); // pug로 응답
 });
 
 app.get("/tour", function (req, res) {
   // get 요청이 들어오면 응답
   //res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
-  res.render("tour");
+  res.render("tour", {
+    title: "여행플랫폼 : hanul",
+    subtitle: "한울투어",
+    message: "한울투어는 어떤 서비스일까요?",
+    src: "images/tour-cover.jpg",
+  });
 });
 
 app.get("/reserve", function (req, res) {
   // get 요청이 들어오면 응답
   //res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
-  res.render("reserve");
+  res.render("reserve", {
+    title: "여행플랫폼 : hanul",
+    subtitle: "예약/확인",
+    message: "고객님의 예약사항을 확인하세요",
+    src: "images/reserve-cover.jpg",
+  });
 });
 
 app.get("/customer", function (req, res) {
   // get 요청이 들어오면 응답
   //res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
-  res.render("cs");
+  res.render("cs", {
+    title: "여행플랫폼 : hanul",
+    subtitle: "고객센터",
+    message: "무엇이든 물어보세요!",
+    src: "images/cs-cover.jpg",
+  });
 });
 
 app.post("/send_post", function (req, res) {
-  // 자바스크립트 xhr을 이용한 post 데이터가 전송되면, 이를 출력
-  console.log("수신 데이터 : ", req.body);
-  console.log("수신 데이터 타입 : ", typeof req.body);
-  res.send("<h1>POST 데이터가 정상적으로 수신되었습니다.</h1>");
+  //   자바스크립트 xhr을 이용한 post 데이터가 전송되면, 이를 출력
+  //   console.log("수신 데이터 : ", req.body);
+  //   console.log("수신 데이터 타입 : ", typeof req.body);
+  //   res.send("<h1>POST 데이터가 정상적으로 수신되었습니다.</h1>");
+  res.render("http-done", {
+    title: "여행플랫폼 : hanul",
+    subtitle: "post 통신 완료",
+    message: "post 데이터 전송 완료",
+    src: "images/done-cover.jpg",
+    received_name: req.body.guest_name,
+    received_phone: req.body.guest_phone,
+  });
 });
 
 app.post("/send_post_ajax", function (req, res) {

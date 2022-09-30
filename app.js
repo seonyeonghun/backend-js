@@ -40,7 +40,13 @@ app.get('/customer', function (req, res) { // get 요청이 들어오면 응답
 });
 
 app.post('/send_reserve', function(req, res){
-    res.send(req.body.guest_name+"님, 환영합니다."); // bodyParser가 이해하고 출력
+    //res.send(req.body.guest_name+"님, 환영합니다."); // bodyParser가 이해하고 출력
+    console.log(req.body.guest_name, req.body.guest_phone)
+    // if(req.body.guest_name === "홍길동") {
+    //     res.send(req.body.guest_name+"님, 환영합니다.")
+    // } else {
+    //     res.send("회원가입 페이지로 이동합니다")
+    // }
 })
 
 const CURRENT_PORT = app.get('port'); // app.set() 으로 4000번을 지정했음.

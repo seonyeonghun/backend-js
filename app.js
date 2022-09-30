@@ -16,9 +16,13 @@ app.get('/', function (req, res) { // get 요청이 들어오면 응답
     res.sendFile(__dirname+"/public/main.html"); // HTML 파일로 응답
 });
 
-app.post('/reserve', function (req, res) { // get 요청이 들어오면 응답
-    res.send('post 요청 처리페이지')
+app.get('/reserve', function (req, res) { // get 요청이 들어오면 응답
+    res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
 });
+
+app.post('/send_reserve', function(req, res){
+    res.send("post 요청에 대한 응답 페이지");
+})
 
 app.listen(3000, function(){
     console.log(`서버가 3000번 포트에서 실행중입니다`)

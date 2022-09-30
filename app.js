@@ -21,11 +21,22 @@ app.use(morgan("dev")); // 개발 끝나고, 서비스(=배포)할때는 combine
 app.get('/', function (req, res) { // get 요청이 들어오면 응답
     //res.send('Hello World'); // 서버에서 text로 응답
     //res.sendFile(__dirname+"/public/main.html"); // HTML 파일로 응답
-    res.render('index', { title: 'pug 템플릿 엔진 적용', message: '렌더링 성공!' }); // pug로 응답
+    res.render('index', { title: 'hanul tour!', message: '지금 예약하세요!' }); // pug로 응답
+});
+
+app.get('/tour', function (req, res) { // get 요청이 들어오면 응답
+    //res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
+    res.render('tour');
 });
 
 app.get('/reserve', function (req, res) { // get 요청이 들어오면 응답
-    res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
+    //res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
+    res.render('reserve');
+});
+
+app.get('/customer', function (req, res) { // get 요청이 들어오면 응답
+    //res.sendFile(__dirname+"/public/reserve.html"); // HTML 파일로 응답
+    res.render('cs');
 });
 
 app.post('/send_reserve', function(req, res){

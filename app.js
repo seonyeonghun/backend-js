@@ -47,7 +47,10 @@ app.post('/send_reserve', function(req, res){
     // } else {
     //     res.send("회원가입 페이지로 이동합니다")
     // }
+    // 실제 서비스로직상 DB와 연동해서 회원정보 유무를 확인하고,
+    // 이에 따른 처리를 실시해야 함!
 })
+
 
 const CURRENT_PORT = app.get('port'); // app.set() 으로 4000번을 지정했음.
 

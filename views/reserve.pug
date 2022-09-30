@@ -23,13 +23,20 @@ html(lang="en")
                 li
                     a(href="/customer") 고객센터
         div(class="container")
-            form(action="/send_reserve", id="checkForm", name="checkForm", autocomplete="off", method="post")
-                label(for="guest_name") 예약자명
-                input(type="text", id="guest_name", name="guest_name", placeholder="12자 이내")
-                label(for="guest_phone") 전화번호
-                input(type="tel", id="guest_phone", name="guest_phone", placeholder="-빼고 입력하세요")
-                input(type="submit", value="확인", id="send")
-        hr
+            form(action="/send_post", id="checkForm", name="checkForm", autocomplete="off", method="post")
+                ul(class="form-list")
+                    li
+                        label(for="guest_name") 예약자명 : 
+                        input(type="text", id="guest_name", name="guest_name", placeholder="12자 이내" value="김한울")
+                    li
+                        label(for="guest_phone") 전화번호 : 
+                        input(type="tel", id="guest_phone", name="guest_phone", placeholder="-빼고 입력하세요" value="0623627797")
+                    li
+                        input(type="reset", value="취소")
+                        input(type="submit", value="확인", id="send")
+        div(class="container")
+            button(type="button", id="ajax_send") ajax post 전송
+            p(class="ajax_result") ajax 비동기로 전송된 데이터가 표시됩니다.
         footer
             div(class="container")
                 p &copy; hanul. 2022.all rights reserved.

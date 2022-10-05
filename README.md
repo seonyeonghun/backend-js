@@ -26,3 +26,9 @@ nodejs 를 이용한 백엔드 자바스크립트
 * 5xx (서버 오류) : 서버측 오류 (500, 501, 502, ...)
 
 > [모질라 http 응답코드 정리] (https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
+
+# 추가로 진행중인 사항
+* MVC 패턴 적용 : 현재 model(=DB)은 빠져있음
+* Router 분리
+* Listener 분리
+* 보다 현실적인 디렉터리 구조(=scaffold) 적용

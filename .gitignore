@@ -1,6 +1,6 @@
 # node_modules 폴더 제외하고 깃헙에 전송!
 # 디렉터리 구조를 변경하면서 중첩되어 다른위치에 있는 node_modules를 제외
-**node_modules/
+**/node_modules
 
 # .txt, .sql 안보내겠다.
 *.sql
